@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ワンワン度診断</title>
+  <style>
+    input[type=radio] {
+      display: none;
+    }
+    input[type="radio"]:checked + label {
+      /*color: #ffffff;*/
+      background-image: none, url(pawpads.jpg);
+      background-size: auto, 100%
+    }
+    .label {
+      display: block; /* ブロックレベル要素化する */
+      float: left; /* 要素の左寄せ・回り込を指定する */
+      margin: 3px; /* ボックス外側の余白を指定する */
+      width: 40px; /* ボックスの横幅を指定する*/
+      height: 45px; /* ボックスの高さを指定する */
+      padding-left: 2px; /* ボックス内左側の余白を指定する */
+      padding-right: 2px; /* ボックス内御右側の余白を指定する */
+      color: #000000; /* フォントの色を指定 */
+      font-size: 18px;
+      text-align: center; /* テキストのセンタリングを指定する */
+      line-height: 45px; /* 行の高さを指定する */
+      border: 2px solid #00a917;/* ボックスの境界線を実線で指定する */
+      border-radius: 23px; /* 角丸を指定する */
+    }
+    .center {
+      width: 60px;
+      height: 50px;
+      display: inline-block;
+    }
+    .centerSide {
+      display: inline-block;
+      vertical-align: middle;
+      height: 60px;
+      width: 160px;
+    }
+    #output {
+      border: solid 3px gold;
+      padding: 20px 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>ワンワン度診断</h1>
+  <p>設問</p>
+  <p>＜第１問＞</p>
+  <p>いつも元気でいる</p>
+  <div>
+    <div class="centerSide">
+      とてもあてはまる≪
+    </div>
+    <div class="center">
+      <input type="radio" name="quest1" value="a" id="a"/>
+      <label for="a" class="label"></label>
+    </div>
+    <div class="center">
+      <input type="radio" name="quest1" value="b" id="b"/>
+      <label for="b" class="label"></label>
+    </div>
+    <div class="center">
+      <input type="radio" name="quest1" value="c" id="c"/>
+      <label for="c" class="label"></label>
+    </div>
+    <div class="center">
+      <input type="radio" name="quest1" value="d" id="d"/>
+      <label for="d" class="label"></label>
+    </div>
+    <div class="center">
+      <input type="radio" name="quest1" value="e" id="e"/>
+      <label for="e" class="label"></label>
+    </div>
+    <div class="centerSide">
+      ≫全くあてはまらない
+    </div>
+  </div>
+
+  <p>＜第２問＞</p>
+  <p>暑さ・寒さに弱く疲れやすい</p>
+  <div>
+    <div class="center">
+      <input type="radio" name="quest2" value="f" id="f"/>
+      <label for="f" class="label"></label>
+    </div>
+    <div class="center">
+      <input type="radio" name="quest2" value="g" id="g"/>
+      <label for="g" class="label"></label>
+    </div>
+    <div class="center">
+      <input type="radio" name="quest2" value="h" id="h"/>
+      <label for="h" class="label"></label>
+    </div>
+    <div class="center">
+      <input type="radio" name="quest2" value="i" id="i"/>
+      <label for="i" class="label"></label>
+    </div>
+    <div class="center">
+      <input type="radio" name="quest2" value="j" id="j"/>
+      <label for="j" class="label"></label>
+    </div>
+  </div>
+  <p>あてはまる≪・≫あてはまらない</p>
+
+  <p colspan="2" style="text-align: center;">
+    <button>表示</button>
+  </p>
+
+  <p id="output">ここに表示します</p>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
