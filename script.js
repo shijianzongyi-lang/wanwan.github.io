@@ -1,9 +1,11 @@
 'use strict';
 
 const p = document.getElementById('output');
-
+let div = document.getElementById('result');
 // ［表示］ボタンを押したら…
 document.querySelector('button').addEventListener('click', () => {
+  div.classList.remove('nondisplay');
+  //入力結果まとめ
   const result = [0, 0, 0, 0];
   const radio1 = document.getElementsByName('quest1');
   let score = 0;
@@ -30,13 +32,8 @@ document.querySelector('button').addEventListener('click', () => {
       result[3] = btn.value;
     }
   }
-
   //アルファベット‐数値変換
   const cal = [0, 0, 0, 0];
-  const judge1 = ['a', 'b', 'c', 'd'];
-  const judge2 = ['e', 'f', 'g', 'h'];
-  const judge3 = ['i', 'j', 'k', 'l', 'm'];
-  const judge4 = ['n', 'o', 'p', 'q', 'r'];
   if (result[0] == 'a' || result[0] == 'b') {
     cal[0] = 1;
   } else if (result[0] == 'c') {
@@ -67,6 +64,7 @@ document.querySelector('button').addEventListener('click', () => {
   } else if (result[3] == 'r') {
     cal[3] = -50;
   }
+  //点数計算
   const raw_score = (100 + cal[1] + cal[2] + cal[3]) * cal[0];
   if (raw_score > 100) {
     score = 100;
