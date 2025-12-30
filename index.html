@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ワンワン度診断</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
     input[type=radio] {
       display: none;
     }
@@ -12,6 +13,11 @@
       /*color: #ffffff;*/
       background-image: none, url(pawpads.jpg);
       background-size: auto, 100%
+    }
+    .popFont {
+      font-family: "Mochiy Pop One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
     }
     .label {
       display: block; /* ブロックレベル要素化する */
@@ -33,6 +39,21 @@
       height: 50px;
       display: inline-block;
     }
+    button {
+      width: 60px;
+      height: 40px;
+      font-size: 18px;
+      border: 0px solid #999;
+      border-radius: 5px;
+      color: #ffffff;
+      background:rgb(74, 170, 239)
+    }
+    .nondisplay {
+      display: none;
+    }
+    .resultDisplay {
+      text-align: center;
+    }
     #output {
       border: solid 3px gold;
       padding: 20px 10px;
@@ -43,8 +64,8 @@
   <h1>ワンワン度診断</h1>
   <p>設問</p>
 
-  <p>＜第１問＞</p>
-  <p>あなたの年齢は？</p>
+  <p class="popFont">＜第１問＞</p>
+  <p class="popFont">あなたの年齢は？</p>
   <div>
     <div class="center">
       <input type="radio" name="quest1" value="a" id="q11"/>
@@ -136,11 +157,14 @@
   </div>
   <p>あてはまる≪・≫あてはまらない</p>
 
-  <p colspan="2" style="text-align: center;">
-    <button>表示</button>
+  <p style="text-align: center;">
+    <button>診断</button>
   </p>
-
-  <p id="output">ここに表示します</p>
+  <div class="nondisplay" id="result">
+    <p class="resultDisplay" id="output">ここに表示します</p>
+    <p>あいうえお</p>
+  </div>
+  
 
 
   <script src="script.js"></script>
