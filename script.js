@@ -76,6 +76,13 @@ btn.addEventListener('click', () => {
     score = raw_score;
   }
   p.textContent = `${score}％`;
+
+  const share_title = `わたしのワンワン度は...${score}％でした。`;
+  const share_twitter = document.getElementById("js-share-twitter");
+  share_twitter.setAttribute(
+	  "href",
+	  "https://twitter.com/share?url=" + "https://shijianzongyi-lang.github.io/wanwan/" + "&text=" + share_title + "&hashtags=ワンワン度診断"
+);
 });
 
 document.getElementById('btn2').addEventListener('click', () => {
