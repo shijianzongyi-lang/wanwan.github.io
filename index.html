@@ -145,6 +145,16 @@
       font-size: 60px;
       color: #77bcff;
     }
+    .share_button {
+	    display: inline-block;
+    	padding: 8px 24px;
+	    border-radius: 8px;
+	    color: #fff;
+	    background-color: #333;
+	    text-decoration: none;
+	    transition: 0.4s;
+      background-color: #1da1f2;
+    }
   </style>
 </head>
 <body>
@@ -258,6 +268,13 @@
   </p>
   <div class="nondisplay" id="result">
     <p class="resultDisplay maruFont">あなたのワンワン度は...<b id="output">100%</b></p>
+    <a
+	    id="js-share-twitter"
+	    class="share_button share_twitter"
+	    href=""
+    	target="_blank"
+	    rel="nofollow noopener noreferrer"
+	  >Twitterで共有する</a>
     <p style="text-align: center;" id="btn2">
       <button class="button2 maruFont">もう一度診断する</button>
     </p>
