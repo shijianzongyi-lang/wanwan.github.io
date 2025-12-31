@@ -140,10 +140,13 @@
       text-align: center;
       margin: 40px 0 40px 0;
     }
-    #output {
+    .output {
       padding: 20px 10px;
       font-size: 60px;
       color: #77bcff;
+    }
+    .underLine {
+      background-image: linear-gradient(to bottom, transparent 90%, #77bcff 90%);
     }
     .share_button {
 	    display: inline-block;
@@ -267,14 +270,14 @@
     <button class="button1 maruFont">診断</button>
   </p>
   <div class="nondisplay" id="result">
-    <p class="resultDisplay maruFont">あなたのワンワン度は...<b id="output">100%</b></p>
+    <p class="resultDisplay maruFont">あなたのワンワン度は...<b id="output" class="counter output underLine">0</b><b class="output underLine">％</b></p>
     <a
 	    id="js-share-twitter"
-	    class="share_button share_twitter"
+	    class="share_button share_twitter maruFont"
 	    href=""
     	target="_blank"
 	    rel="nofollow noopener noreferrer"
-	  >Twitterで共有する</a>
+	  >Xで共有する</a>
     <p style="text-align: center;" id="btn2">
       <button class="button2 maruFont">もう一度診断する</button>
     </p>
